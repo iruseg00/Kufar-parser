@@ -7,7 +7,7 @@ const queue = require('./queue');
 var timer = 
 {
   "development" : 0 ,
-  "production"  : 900000
+  "production"  : 0
 };
 
 try 
