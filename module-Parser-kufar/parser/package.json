@@ -1,0 +1,31 @@
+{
+  "name": "vk_parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon index.js",
+    "start:prod": "cross-env NODE_ENV=production nodemon index.js",
+    "test": "cross-env NODE_ENV=development nodemon --inspect index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
+    "pg": "^7.14.0",
+    "pg-hstore": "^2.3.3",
+    "puppeteer": "^2.0.0",
+    "queue": "^6.0.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "sequelize": "^5.21.2",
+    "sequelize-cli": "^5.5.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
