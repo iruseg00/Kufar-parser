@@ -1,6 +1,6 @@
 const winston = require('winston');
 const { format } = require('winston');
-const { combine, timestamp, label, prettyPrint } = format;
+const { combine, timestamp, label } = format;
 
 const logger = winston.createLogger({
   level: 'info',
@@ -18,18 +18,6 @@ const logger = winston.createLogger({
   ]
 });
 
-const memory = winston.createLogger({
-  level: 'info',
-  format: format.combine(
-    timestamp(),
-    format.splat(),
-    format.simple()
-  ),
-  transports: [
-    new winston.transports.File({ filename: 'logs/output_log/memory.log', level: 'info' }),
-  ]
-});
-
 const workTime = winston.createLogger({
   level: 'info',
   format: format.combine(
@@ -42,4 +30,4 @@ const workTime = winston.createLogger({
   ]
 });
 
-module.exports = { logger , memory , workTime };
+module.exports = { logger , workTime };

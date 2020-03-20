@@ -10,10 +10,10 @@
   },
   "production": 
   {
-    "username": "postgres",
+    "username": "postgres_kufar",
     "password": "trytofindme",
     "database": "postgres",
-    "host": "db",
+    "host": "db_kufar",
     "dialect": "postgres",
     "operatorsAliases": false
   }

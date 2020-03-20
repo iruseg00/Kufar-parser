@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 33133
+EXPOSE 20001
 
 RUN ["apt-get" , "update"]
 

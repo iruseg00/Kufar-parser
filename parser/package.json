@@ -1,14 +1,14 @@
 {
-  "name": "vk_parser",
-  "version": "1.0.0",
-  "description": "",
+  "name": "parser",
+  "version": "2.0.0",
+  "description": "Kufar parser",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon index.js",
     "start:prod": "cross-env NODE_ENV=production nodemon index.js",
     "test": "cross-env NODE_ENV=development nodemon --inspect index.js"
   },
-  "author": "",
+  "author": "Arseniy Korolkov",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",

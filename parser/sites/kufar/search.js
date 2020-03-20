@@ -1,6 +1,6 @@
 var queue = require('../../queue');
 var extract = require('./extract');
-const {logger , workTime} = require('../../logs/log');
+const {logger} = require('../../logs/log');
 
 var subStr = 'https://re.kufar.by/vi/';
 
