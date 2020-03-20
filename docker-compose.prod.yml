@@ -1,32 +1,32 @@
 version: "3.7"
 
 services:
-  db:
+  db_kufar:
     image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: trytofindme
     volumes:
-      - ./db/db_prod:/var/lib/postgresql/data
+      - ./db_Kufar/db_prod:/var/lib/postgresql/data
 
 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 5520:8080
-    depends_on:
-      - db
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 5520:8080
+  #   depends_on:
+  #     - db_kufar
 
       
-  parser:
+  parser_kufar:
     build:
       context: ./parser
       dockerfile: prod.Dockerfile  
     restart: always
     ports:
-      - 33133:33133
+      - 20001:20001
     volumes:
       - /home/parser_log:/usr/src/app/logs/output_log
     depends_on:
-      - db
+      - db_kufar
