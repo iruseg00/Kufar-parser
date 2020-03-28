@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  db_kufar:
+  dbKufar:
     image: postgres
     restart: always
     environment:
@@ -10,16 +10,16 @@ services:
       - ./db_Kufar/db_prod:/var/lib/postgresql/data
 
 
-  # adminer:
-  #   image: adminer
-  #   restart: always
-  #   ports:
-  #     - 5520:8080
-  #   depends_on:
-  #     - db_kufar
+  adminer2:
+    image: adminer
+    restart: always
+    ports:
+      - 15520:8080
+    depends_on:
+      - dbKufar
 
       
-  parser_kufar:
+  parserKufar:
     build:
       context: ./parser
       dockerfile: prod.Dockerfile  
@@ -29,4 +29,4 @@ services:
     volumes:
       - /home/parser_log:/usr/src/app/logs/output_log
     depends_on:
-      - db_kufar
+      - dbKufar

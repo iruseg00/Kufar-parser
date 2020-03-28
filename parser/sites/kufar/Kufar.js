@@ -17,7 +17,9 @@ async function Kufar()
     try
     {
         let html ;
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({headless:true ,
+            args: ['--disable-dev-shm-usage' , '--no-sandbox']
+          });
         for(var i = 0 ; i < 7; i++)
         {
           const page = await browser.newPage();

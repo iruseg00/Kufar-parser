@@ -4,16 +4,16 @@
     "username": "postgres",
     "password": "trytofindme",
     "database": "postgres",
-    "host": "0.0.0.0",
+    "host": "localhost",
     "dialect": "postgres",
     "operatorsAliases": false
   },
   "production": 
   {
-    "username": "postgres_kufar",
+    "username": "postgres",
     "password": "trytofindme",
     "database": "postgres",
-    "host": "db_kufar",
+    "host": "dbKufar",
     "dialect": "postgres",
     "operatorsAliases": false
   }

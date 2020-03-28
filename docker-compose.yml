@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.7"
 
 services:
   db:
@@ -9,8 +9,8 @@ services:
     ports:
       - 5432:5432
 
-  adminer:
+  adminer2:
     image: adminer
     restart: always
     ports:
-      - 5520:8080
+      - 15520:8080
