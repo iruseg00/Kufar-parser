@@ -6,8 +6,6 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: trytofindme
-    volumes:
-      - ./db_Kufar/db_prod:/var/lib/postgresql/data
 
 
   adminer2:
@@ -19,7 +17,7 @@ services:
       - dbKufar
 
       
-  parserKufar:
+  parser_kufar:
     build:
       context: ./parser
       dockerfile: prod.Dockerfile  
@@ -27,6 +25,6 @@ services:
     ports:
       - 20001:20001
     volumes:
-      - /home/parser_log:/usr/src/app/logs/output_log
+      - /home/projects/Kufar-parser:/usr/src/app/logs/output_log
     depends_on:
       - dbKufar

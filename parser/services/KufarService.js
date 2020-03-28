@@ -26,14 +26,9 @@ class KufarService {
         size_kitchen: body.size_kitchen ,
         bathroom: body.bathroom ,
         balcony: body.balcony ,
-        time_call: body.timeCall ,
         description: body.description ,
-        parking: body.parking ,
-        roof: body.roof ,
-        existence: body.existence , 
         coordinates: body.coordinates ,
         date_created: body.dateCreated ,
-        date_updated: body.dateUpdated ,
         site: body.site ,
       }
     });

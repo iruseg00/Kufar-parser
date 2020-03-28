@@ -97,24 +97,8 @@ var Kufar = sequelize.define(
       type: Sequelize.STRING,
       allowNull: true
     },
-    time_call: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
     description: {
       type: Sequelize.TEXT,
-      allowNull: true
-    },
-    parking: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
-    roof: {
-      type: Sequelize.STRING,
-      allowNull: true
-    }, 
-    existence: {
-      type: Sequelize.STRING,
       allowNull: true
     },
     coordinates: 
@@ -135,11 +119,6 @@ var Kufar = sequelize.define(
       type: Sequelize.DATE,
       allowNull: true
     },
-    date_updated: 
-    {
-      type: Sequelize.DATE,
-      allowNull: true
-    }
   },
   );
   

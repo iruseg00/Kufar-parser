@@ -1,5 +1,5 @@
 const Kufar = require('./sites/kufar/Kufar');
-const { logger , workTime } = require('./logs/log');
+const { logger } = require('./logs/log');
 const Sequelize = require('./db/config/connect');
 const queue = require('./queue');
 
@@ -28,7 +28,6 @@ try
   {
     (async function()
     {
-      workTime.info('---start---');
       await Kufar();
       queue.start();
     }());

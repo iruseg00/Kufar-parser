@@ -72,9 +72,9 @@ function send(object)
             if(object[key] === undefined)
                 object[key] = "";
         }
-        object.site = "Kufar.by";
+        object.site = "re.kufar.by";
 
-        logger.info('KUFAR: send SUCCESS:  ' + object.link);
+        logger.info('KUFAR: Archived success:  ' + object.link);
         return KufarService.create(object);
     } 
     catch (error) 

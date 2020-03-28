@@ -1,7 +1,6 @@
 var rp = require('request-promise');
 var send = require('./send');
 const {logger} = require('../../logs/log');
-var cheerio = require('cheerio');
 
 var array = [];
 
@@ -36,7 +35,7 @@ function extract(link)
       object.description = description;
       object.dateCreated = date;
       object.link = link;
-      logger.info('KUFAR: extract SUCCESS ' + object.link);
+      
       return send(object);
     });
   } 
