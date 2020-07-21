@@ -24,13 +24,9 @@ try
       logger.error("Unable to connect to the database: " + error);
     });
     
-  setTimeout(()=>
+  setInterval(()=>
   {
-    (async function()
-    {
-      await Kufar();
-      queue.start();
-    }());
+      Kufar();
   }, timer[env]);
 } 
 catch (error) 
