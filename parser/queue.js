@@ -3,7 +3,7 @@ var queue = Queue();
 const {logger} = require('./logs/log');
 
 queue.concurrency = 1;
-queue.autostart = false;
+queue.autostart = true;
 queue.timeout = 10000;
 var i = 0;
 
